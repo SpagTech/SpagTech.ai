@@ -1,0 +1,39 @@
+  /* Add custom CSS for glowing effect */
+  .glow-on-hover {
+    transition: 0.5s;
+  }
+  .glow-on-hover:hover {
+    box-shadow: 0 0 10px 2px rgba(0, 255, 0, 0.8);
+  }
+   /* Custom style for card transparency */
+.transparent-card {
+background-color: rgba(255, 255, 255, 0.297);
+}
+@keyframes zigzag {
+0% { transform: translateX(0); }
+25% { transform: translateX(5px); }
+50% { transform: translateX(-5px); }
+75% { transform: translateX(5px); }
+100% { transform: translateX(0); }
+}
+
+.card:hover {
+animation: zigzag 0.5s infinite;
+}
+.hover-underline-animation:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: #ffffff;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all 0.3s ease-in-out 0s;
+  }
+  .hover-underline-animation:hover:before {
+      visibility: visible;
+      transform: scaleX(1);
+  }
+  
